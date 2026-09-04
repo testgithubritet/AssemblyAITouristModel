@@ -1,0 +1,14 @@
+# Streamlit Secrets (CRITICAL: Keeps API keys private)
+.streamlit/secrets.toml
+
+# Python Cache & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# System Junk Files
+.DS_Store
+Thumbs.db
