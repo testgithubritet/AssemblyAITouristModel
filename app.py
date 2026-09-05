@@ -107,17 +107,3 @@ with tab2:
         else:
             st.warning("No speech detected. Please try recording again.")
 
-# 2. Setup & API Keys (Using Streamlit Secrets)
-aai.settings.api_key = st.secrets.get("ASSEMBLYAI_API_KEY", "YOUR_LOCAL_FALLBACK_KEY")
-aai.settings.http_timeout = 60.0  # Prevents 500/timeout errors
-
-# 3. Helper Functions
-def translate_text(text, target_lang):
-    try:
-        return GoogleTranslator(source='auto', target=target_lang).translate(text)
-    except Exception as e:
-        return f"Translation error: {str(e)}"
-
-
-
-# Tabs, audio recorders, and AssemblyAI call logic go here...
