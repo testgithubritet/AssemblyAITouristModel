@@ -30,16 +30,14 @@ aai.settings.api_key = aai_key
 # Target Language Selection
 target_language = st.sidebar.selectbox(
     "Target Language", 
-    ["Japanese", "Spanish", "French", "German", "Chinese", "Italian"]
+    ["Spanish", "French", "German", "Italian"]
 )
 
 # Language Code Mapping for Translator
 LANG_CODES = {
-    "Japanese": "ja",
     "Spanish": "es",
     "French": "fr",
     "German": "de",
-    "Chinese": "zh-CN",
     "Italian": "it",
     "English": "en"
 }
