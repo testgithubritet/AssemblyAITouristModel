@@ -107,9 +107,6 @@ with tab2:
         else:
             st.warning("No speech detected. Please try recording again.")
 
-# 1. Page Configuration
-st.set_page_config(page_title="Two-Way Tourist Translator", page_icon="💬")
-
 # 2. Setup & API Keys (Using Streamlit Secrets)
 aai.settings.api_key = st.secrets.get("ASSEMBLYAI_API_KEY", "YOUR_LOCAL_FALLBACK_KEY")
 aai.settings.http_timeout = 60.0  # Prevents 500/timeout errors
@@ -121,7 +118,6 @@ def translate_text(text, target_lang):
     except Exception as e:
         return f"Translation error: {str(e)}"
 
-# 4. Streamlit UI & Logic
-st.title("💬 Two-Way Tourist Translator")
+
 
 # Tabs, audio recorders, and AssemblyAI call logic go here...
