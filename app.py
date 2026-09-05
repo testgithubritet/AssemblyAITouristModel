@@ -5,6 +5,8 @@ import assemblyai as aai
 from deep_translator import GoogleTranslator
 from streamlit_mic_recorder import mic_recorder
 
+aai.settings.api_key = st.secrets["ASSEMBLYAI_API_KEY"]
+
 # Configure Page Layout
 st.set_page_config(
     page_title="Two-Way Tourist Translator", 
